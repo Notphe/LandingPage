@@ -1,7 +1,5 @@
 /* General popup size and centering */
 html, body {
-    width: 350px;  /* Fixed width */
-    height: 400px; /* Fixed height */
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -9,20 +7,21 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Make the body take full height */
+    width: 100vw;  /* Full viewport width */
     box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow */
 }
 
 /* Container for the form and content */
 .container {
-    width: 100%;
-    max-width: 320px;
+    width: 90%; /* Make the width dynamic */
+    max-width: 400px; /* Maximum width for large screens */
     padding: 25px;
     background-color: #2c2c2c; /* Slightly lighter background */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.6); /* Strong shadow for floating effect */
     text-align: center;
-    margin: 20px 20px; /* Equal margin on all sides (top, bottom, left, right) */
+    margin: 20px; /* Margin around the container */
 }
 
 /* Headers for Sign In and Messages */
@@ -78,8 +77,9 @@ button {
     font-size: 16px;
     border-radius: 8px;
 }
+
 .subscribe-button {
-    background-color: #ffc107; /* Red button */
+    background-color: #ffc107; /* Gold button */
     padding: 12px;
     margin-top: 20px;
     font-size: 16px;
@@ -105,4 +105,16 @@ button:hover {
 /* Adjust the overall spacing */
 .container input, .container button {
     margin-top: 12px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    button {
+        padding: 10px; /* Adjust button size for smaller screens */
+        font-size: 14px; /* Adjust button text size */
+    }
 }
