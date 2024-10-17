@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Return to Extension</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <div class="container">
         <h2>Return to Your Extension</h2>
         <p>Please close this popup and return to your extension.</p>
-        <button id="close-popup" class="signout-button">Close Popup</button>
+        <button id="close-popup" class="signout-button" aria-label="Close popup and return to extension">Close Popup</button>
     </div>
 
     <script>
         document.getElementById('close-popup').addEventListener('click', function() {
             window.close();
         });
-    </script></body>
+    </script>
+</body>
 </html>
